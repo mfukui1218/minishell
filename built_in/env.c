@@ -6,7 +6,7 @@ void	init_env(t_command *command)
 }
 
 
-int	env_fun(void)
+int	env_fun(t_input *input)
 {
-	puts("success");
+	print("%s", input->envlist->value);
 }

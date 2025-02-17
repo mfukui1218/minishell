@@ -1,12 +1,16 @@
 #ifndef BUILTIN_H
 #define BUILTIN_H
-#define CD 1
-#define PWD 2
-#define ECHO 3
-#define EXPORT 4
-#define UNSET 5
-#define ENV 6
-#define EXIT 7
+
+typedef enum	e_builtin
+{
+	CD, // 0
+	PWD, // 1
+	ECHO, // 2
+	EXPORT, // 3
+	UNSET, // 4
+	ENV, // 5
+	EXIT // 6
+}	t_builtin;
 
 #include "../minishell.h"
 

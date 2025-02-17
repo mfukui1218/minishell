@@ -23,4 +23,5 @@ void	set_command(t_input *input)
 		set_result(input->token[i]);
 		i++;
 	}
+	
 }

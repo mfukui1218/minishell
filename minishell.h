@@ -17,6 +17,7 @@
 
 typedef struct s_input{
 	char		*input;
+	t_envlist	*envlist;
 	char		**token;
 	t_command	*command;
 	size_t		token_num;
@@ -25,18 +26,22 @@ typedef struct s_input{
 }	t_input;
 
 typedef struct s_command{
-	int		command;
-	int		*option;
-	char	*arguments;
+	int			command;
+	int			*option;
+	char		*arguments;
 	t_result	*result;
 }	t_command;
 
 typedef struct s_result{
 	char		*result;
+	int			fd;
 	t_result	*prev;
 	t_result	*next;
 }	t_result;
 
+typedef struct s_envlist{
+	char	*value;
+}	t_envlist;
 //debug
 void line(void);
 
